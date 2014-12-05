@@ -1,7 +1,5 @@
 // 在 Cloud code 里初始化 Express 框架
 
-require("main.js");
-
 var express = require('express');
 var app = express();
 
@@ -16,14 +14,19 @@ app.get('/hello', function(req, res) {
 });
 
 app.get('/hello2',function(req,res){
-  AV.Cloud.run("hello", {name: 'dennis'}, {
-  success: function(data){
-      //调用成功，得到成功的应答data
-  },
-  error: function(err){
-      //处理调用失败
-  }
-});
+  var query = new AV.Query("Things");
+  query.equalTo("name", req.params.movie);
+  query.find({
+    success: function(results) {
+      var sum = 0;
+      for (var i = 0; i < results.length; ++i) {
+      	res.success(results[i].get("name"));
+      }
+    },
+    error: function() {
+      res.error("Things lookup failed");
+    }
+  });
 }
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
