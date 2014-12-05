@@ -15,12 +15,17 @@ app.get('/hello', function(req, res) {
   res.render('hello', { message: 'Congrats, you just set up your app!' });
 });
 
-function querytest(res){
-  var query = new AV.Query("Things");
-  query.equalTo("name", "duoduo");
-  query.find({
+function querytest(res,seriesID){
+  var query = new AV.Query("series");
+//  query.equalTo("name", "duoduo");
+  query.get( seriesID, {
     success: function(results) {
-  	res.render('hello', { message: 'Congrats, duoduo just set up your app!' });
+	var res = "";
+	for(var i=0; i < results.length; ++i)
+	{
+		res = res + results[i].get("things");
+	}
+  	res.render('hello', { message: res });
     },
     error: function(error) {
 	console.log(error);
@@ -30,7 +35,7 @@ function querytest(res){
 }
 
 app.get('/hello2',function(req,res){
-	querytest(res);
+	querytest(res,req.query.sid);
 });
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
