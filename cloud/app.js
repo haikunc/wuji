@@ -20,8 +20,7 @@ function get_thing(tid){
     query.get(tid,{
               success:function(result){
               
-                res.render('hello', { message: "adsfasdf" });
-                return result;
+                return result.get("title");
               },
               error:function(error){
                 return null;
@@ -41,7 +40,7 @@ function querytest(res,seriesID){
                    things.push(get_thing(tids[i]));
                 }
           //         res.render('series', { series: result, things:things });
-                   res.render('hello', { message: tids.length });
+                   res.render('hello', { message: things[0] });
               },
               
               error: function(error) {
