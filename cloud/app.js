@@ -15,23 +15,10 @@ app.get('/hello', function(req, res) {
         res.render('hello', { message: 'Congrats, you just set up your app!' });
         });
 
-function get_thing(tid){
-    var query = new AV.Query("Things");
-    var obj = tid;
-    query.get(tid,{
-              success:function(result){
-              
-                obj = result;
-              },
-              error:function(error){
-		obj = "error";
-              }
-        });
-    return obj;
-}
 
 function querytest(res,seriesID){
     var query = new AV.Query("series");
+    var query_thing = new AV.Query("Things");
     query.get( seriesID, {
               success: function(result) {
                 var tids = result.get("things").split(",");
@@ -39,10 +26,14 @@ function querytest(res,seriesID){
 
                 for(var i=0; i < tids.length; ++i)
                 {
-                   things.push(get_thing(tids[i]));
+		   query_thing.get(tids[i],{
+			success:funtion(res_thing){things.push(res_thing)},
+			error:function(res_error){}
+			}
+		   );
                 }
-          //         res.render('series', { series: result, things:things });
-                   res.render('hello', { message: things[0]});
+          //       res.render('series', { series: result, things:things });
+                   res.render('hello', { message: things.length});
               },
               
               error: function(error) {
