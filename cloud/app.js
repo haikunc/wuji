@@ -23,6 +23,7 @@ function querytest(res,seriesID){
     query.get( seriesID, {
               success: function(result) {
                    tids = result.get("things").split(",");
+              	   res.render('hello', { message: tids.length});
               },
               
               error: function(error) {
@@ -30,7 +31,7 @@ function querytest(res,seriesID){
               	   res.render('hello', { message: 'Error'});
               }
         });
-
+/*
     var things = new Array();
     for(var i=0; i < tids.length; ++i){
     query.get( tids[i], {
@@ -40,6 +41,7 @@ function querytest(res,seriesID){
     }
 
     res.render('hello', { message: things.length});
+*/
 
 }
 
