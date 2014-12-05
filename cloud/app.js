@@ -12,5 +12,16 @@ app.get('/hello', function(req, res) {
   res.render('hello', { message: 'Congrats, you just set up your app!' });
 });
 
+app.get('/hello2',function(req,res){
+  AV.Cloud.run("hello", {name: 'dennis'}, {
+  success: function(data){
+      //调用成功，得到成功的应答data
+  },
+  error: function(err){
+      //处理调用失败
+  }
+});
+}
+
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
 app.listen();
