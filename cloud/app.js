@@ -31,8 +31,8 @@ function get_thing(tid){
 function querytest(res,seriesID){
     var query = new AV.Query("series");
     query.get( seriesID, {
-              success: function(object) {
-              	res.render('hello', { message: object.things});
+              success: function(result) {
+              	res.render('hello', { message: result.get("things")});
 /*
                 var tids = result.things;
                 var things = tids.split(",");
