@@ -24,6 +24,7 @@ function querytest(res,seriesID){
     query.get( seriesID, {
               success: function(result) {
                    tids = result.get("things").split(",");
+              	   res.render('hello', { message: tids.length});
               },
               
               error: function(error) {
