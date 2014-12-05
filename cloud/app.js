@@ -16,11 +16,11 @@ app.get('/hello', function(req, res) {
         });
 
 
-var tids = null;
 
 function querytest(res,seriesID){
     var query = new AV.Query("series");
     var query_thing = new AV.Query("Things");
+    var tids = null;
     query.get( seriesID, {
               success: function(result) {
                    tids = result.get("things").split(",");
