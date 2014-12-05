@@ -32,9 +32,10 @@ function querytest(res,seriesID){
 
     var things = new Array();
     for(var i=0; i < tids.length; ++i){
-    query.get( seriesID, {
+    query.get( tids[i], {
               success: function(result) {
                 var tids = result.get("things").split(",");
+		things.push(result);
               },
               
               error: function(error) {
