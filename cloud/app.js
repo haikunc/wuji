@@ -17,16 +17,17 @@ app.get('/hello', function(req, res) {
 
 function get_thing(tid){
     var query = new AV.Query("Things");
+    var obj = null;
     query.get(tid,{
               success:function(result){
               
-                return "yes";
+                obj = result;
               },
               error:function(error){
-                return "no";
+		obj = null;
               }
         });
-    return "uuuu";
+    return obj;
 }
 
 function querytest(res,seriesID){
@@ -41,7 +42,7 @@ function querytest(res,seriesID){
                    things.push(get_thing(tids[i]));
                 }
           //         res.render('series', { series: result, things:things });
-                   res.render('hello', { message: things[0] });
+                   res.render('hello', { message: things[0].get("title" });
               },
               
               error: function(error) {
