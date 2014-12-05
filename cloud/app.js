@@ -14,7 +14,7 @@ app.use(express.bodyParser());    // 读取请求 body 的中间件
 app.get('/hello', function(req, res) {
         res.render('hello', { message: 'Congrats, you just set up your app!' });
         });
-
+/*
 function get_thing(tid){
     var query = new AV.Query("Things");
     query.get(tid,{
@@ -27,27 +27,26 @@ function get_thing(tid){
               }
         })
 }
+*/
 
 function querytest(res,seriesID){
     var query = new AV.Query("series");
-    //  query.equalTo("name", "duoduo");
     query.get( seriesID, {
               success: function(result) {
-              var tids = result.things.split(",");
-              var things = new Array();
-              
-              for(var i=0; i < tids.length; ++i)
-              {
+                var tids = result.things.split(",");
+                var things = new Array();
+                for(var i=0; i < tids.length; ++i)
+                {
                    things.push(get_thing(tids[i]));
-              }
-                    res.render('hello', { series: series, things:things });
+                }
+                   res.render('hello', { series: series, things:things });
               },
               
               error: function(error) {
-              console.log(error);
-              res.render('hello', { msg: 'Error'});
+              	   console.log(error);
+              	   res.render('hello', { msg: 'Error'});
               }
-              });
+        });
 }
 
 app.get('/hello2',function(req,res){
