@@ -1,4 +1,7 @@
 // 在 Cloud code 里初始化 Express 框架
+
+require("main.js");
+
 var express = require('express');
 var app = express();
 
