@@ -29,10 +29,8 @@ function querytest(res,seriesID){
 		   query_thing.get(tids[i],{
 			success:funtion(res_thing){things.push(res_thing)},
 			error:function(res_error){}
-			}
-		   );
+			});
                 }
-          //       res.render('series', { series: result, things:things });
                    res.render('hello', { message: things.length});
               },
               
