@@ -20,10 +20,10 @@ function get_thing(tid){
     query.get(tid,{
               success:function(result){
               
-                return result.get("title");
+                return "yes";
               },
               error:function(error){
-                return null;
+                return "no";
               }
         });
 }
