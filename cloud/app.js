@@ -20,6 +20,7 @@ function get_thing(tid){
     query.get(tid,{
               success:function(result){
               
+                res.render('hello', { message: "adsfasdf" });
                 return result;
               },
               error:function(error){
