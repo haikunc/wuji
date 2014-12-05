@@ -32,7 +32,7 @@ function querytest(res,seriesID){
     var query = new AV.Query("series");
     query.get( seriesID, {
               success: function(result) {
-              	res.render('hello', { message: result.things+result.title});
+              	res.render('hello', { message: result.objectId});
 /*
                 var tids = result.things;
                 var things = tids.split(",");
