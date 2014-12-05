@@ -16,14 +16,14 @@ app.get('/hello', function(req, res) {
         });
 
 
+var tids = null;
+var query = new AV.Query("series");
+var query_thing = new AV.Query("Things");
+
 function querytest(res,seriesID){
-    var query = new AV.Query("series");
-    var query_thing = new AV.Query("Things");
-    var tids = null;
     query.get( seriesID, {
               success: function(result) {
                    tids = result.get("things").split(",");
-              	   res.render('hello', { message: tids.length});
               },
               
               error: function(error) {
