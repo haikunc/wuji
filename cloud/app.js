@@ -26,6 +26,7 @@ function get_thing(tid){
                 return "no";
               }
         });
+    return "uuuu";
 }
 
 function querytest(res,seriesID){
