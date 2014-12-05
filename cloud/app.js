@@ -32,12 +32,12 @@ function querytest(res,seriesID){
 
 
     var things = new Array();
-    for(var i=0; i < tids.length; ++i){
-  	query_thing.get(tids[i],{
+//    for(var i=0; i < tids.length; ++i){
+  	query_thing.get(tids[0],{
 		success:funtion(res_thing){things.push(res_thing);},
 		error:function(res_error){res.render('hello',{message:'error tid'});}
    	 });
-    }
+//    }
     res.render('hello', { message: things.length});
 
 }
