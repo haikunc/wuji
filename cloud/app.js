@@ -14,20 +14,19 @@ app.use(express.bodyParser());    // 读取请求 body 的中间件
 app.get('/hello', function(req, res) {
         res.render('hello', { message: 'Congrats, you just set up your app!' });
         });
-/*
+
 function get_thing(tid){
     var query = new AV.Query("Things");
     query.get(tid,{
               success:function(result){
               
                 return result;
-              }
+              },
               error:function(error){
                 return null;
               }
-        })
+        });
 }
-*/
 
 function querytest(res,seriesID){
     var query = new AV.Query("series");
