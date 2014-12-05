@@ -32,16 +32,14 @@ function querytest(res,seriesID){
     var query = new AV.Query("series");
     query.get( seriesID, {
               success: function(result) {
-              	res.render('hello', { message: result.get("things")});
-/*
-                var tids = result.things;
-                var things = tids.split(",");
+                var tids = result.get("things").split(",");
+		var things = new Array();
+
                 for(var i=0; i < tids.length; ++i)
                 {
                    things.push(get_thing(tids[i]));
                 }
                    res.render('series', { series: series, things:things });
-*/
               },
               
               error: function(error) {
