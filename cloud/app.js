@@ -34,9 +34,9 @@ function querytest(res,seriesID){
               }
         });
     var tt = tids.length;
-    res.render('hello', { message: tt});
 	
-//  for(var i=0; i < tids.length; ++i){
+  for(var i=0; i < tt; ++i){
+  }
 /*
     for(var i=0; i < tids.length ; ++i){
     query_thing.get( tids[i], {
