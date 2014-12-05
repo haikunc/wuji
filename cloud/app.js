@@ -39,7 +39,7 @@ function querytest(res,seriesID){
                 {
                    things.push(get_thing(tids[i]));
                 }
-                   res.render('series', { series: series, things:things });
+                   res.render('series', { series: result, things:things });
               },
               
               error: function(error) {
