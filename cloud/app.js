@@ -33,17 +33,19 @@ function querytest(res,seriesID){
               	   res.render('hello', { message: 'Error'});
               }
         });
-    res.render('hello', { message: tids.length});
+    var tt = tids.length;
+    res.render('hello', { message: tt});
+	
 //  for(var i=0; i < tids.length; ++i){
-    for(var i=0; i < tids.length ; ++i){
 /*
+    for(var i=0; i < tids.length ; ++i){
     query_thing.get( tids[i], {
               success: function(result) {things.push(result);},
               error: function(error) {res.render('hello', { message: 'Error'});}
         });
-*/
     }
 
+*/
 //    res.render('hello', { message: things.length});
 
 
