@@ -30,6 +30,8 @@ function querytest(res,seriesID){
               }
         });
 
+    var things = new Array();
+    for(var i=0; i < tids.length; ++i){
     query.get( seriesID, {
               success: function(result) {
                 var tids = result.get("things").split(",");
@@ -40,10 +42,10 @@ function querytest(res,seriesID){
               	   res.render('hello', { message: 'Error'});
               }
         });
+    }
 
 
 
-    var things = new Array();
 /*    for(var i=0; i < tids.length; ++i){
   	query_thing.get(tids[i],{
 		success:funtion(res_thing){things.push(res_thing);},
