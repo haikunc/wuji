@@ -20,12 +20,12 @@ function querytest(res,seriesID){
 //  query.equalTo("name", "duoduo");
   query.get( seriesID, {
     success: function(results) {
-	var res = "";
+	var msg = "";
 	for(var i=0; i < results.length; ++i)
 	{
-		res = res + results[i].get("things");
+		msg = msg + results[i].get("things");
 	}
-  	res.render('hello', { message: res });
+  	res.render('hello', { message: msg });
     },
     error: function(error) {
 	console.log(error);
