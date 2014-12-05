@@ -32,8 +32,8 @@ function querytest(res,seriesID){
     var query = new AV.Query("series");
     query.get( seriesID, {
               success: function(result) {
-                var tids = result.things.split(",");
-                var things = new Array();
+                var tids = result.things;
+                var things = tids.split(",");
                 for(var i=0; i < tids.length; ++i)
                 {
                    things.push(get_thing(tids[i]));
