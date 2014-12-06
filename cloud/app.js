@@ -17,12 +17,13 @@ app.get('/hello', function(req, res) {
 
 
 
-var query = new AV.Query("series");
-var query_thing = new AV.Query("Things");
-var tids = null;
-var things = new Array();
 
 function querytest(res,seriesID){
+    var query = new AV.Query("series");
+    var query_thing = new AV.Query("Things");
+    var tids = null;
+    var things = new Array();
+
     query.get( seriesID, {
               success: function(result) {
                    tids = result.get("things").split(",");
@@ -34,9 +35,9 @@ function querytest(res,seriesID){
               }
         });
 	
-  for(var i=0; i < tids.length; ++i){
-    console.log(tids[i]);
-    query_thing.get( tids[i], {
+    for(var i=0; i < tids.length; ++i){
+        console.log(tids[i]);
+        query_thing.get( tids[i], {
               success: function(result) {things.push(result);},
               error: function(error) {res.render('hello', { message: 'Error'});}
         });
