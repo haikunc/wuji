@@ -11,7 +11,7 @@
             <%for(var i =0; i < things.length; i++){%>
             <h2><strong><%=things[i].get("title")%></strong></h2>
             <p><img class="lazy" width=298 height=251 src="/cms/diaodiao/assets/pixel.gif" data-src="<%=things[i].get("image").url()%>" /></p>
-            <p><%=thing.get("title")%></p>
+            <p><%=things[i].get("title")%></p>
             <%}%>
         </div>
         <hr><div class="ending">欢迎分享你热爱的领域里的知识和好东西，请投稿至 daren@diaox2.com 或微信号 diaox2 。本篇不对味？欢迎<a class="tousu" id="hidden_self" data-src="1765231559067" href="javascript:complain()">吐槽</a>，让“调调”更符合你的调调。</div>
