@@ -34,6 +34,7 @@ function querytest(res,seriesID){
 		   query_thing.find({
                         success: function(result) {
 	                   things.push(result);
+			   res.render('hello', {message:things.length});
 		        },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
