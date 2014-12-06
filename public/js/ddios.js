@@ -158,7 +158,7 @@ function envCallback(env_data, context_data) {
         });
     } else {
         /* not in dx2 env, some app use jsBridge, should set banner */
-        setBanner();
+ //       setBanner();
         g_dx2 = false;
     }
 };
@@ -167,7 +167,7 @@ function dobind() {
     var result = ddGetAppEnv(envCallback, articleid); /* get if is in app, async */
     if(result == false) {
         /* no jsBridge? put ad banner */
-        setBanner();
+ //       setBanner();
     } else {
         /* should wait callback to add div and click event */
         console.log("nothing..");
