@@ -1,0 +1,536 @@
+ize-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+}
+a {
+    background-color: transparent;
+}
+a:active, a:hover {
+    outline: 0;
+}
+b, strong {
+    font-weight: bold;
+}
+sub, sup {
+    font-size: 50%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.75em;
+}
+sub {
+    bottom: -0.25em;
+}
+img {
+    border: 0;
+}
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+button {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled] {
+    cursor: default;
+}
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+textarea {
+    overflow: auto;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, th {
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, dl, dd, ol, ul, p, blockquote, fieldset {
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+ol, ul, fieldset {
+    padding: 0;
+}
+ol, ul {
+    list-style: none;
+}
+th {
+    text-align: inherit;
+}
+/*
+body, button, textarea {
+    font: 12px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+*/
+body {
+    background-color: #FFF;
+}
+a {
+    /*color: ;*/
+    text-decoration: none;
+}
+a:hover {
+    /*color: ;*/
+    text-decoration: none;
+}
+/* above is normalize */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin-left: auto;  margin-right: auto;
+    padding: 0;
+    /*line-height: 1.6;*/
+    font-family: "Hiragino Sans GB", "Helvetica Neue", Helvetica, "Microsoft Yahei", heiti, Arial, sans-serif;
+    font-size: 16px;
+    max-width: 440px;   /*media query*/
+    min-width: 280px;
+    width: 100%;
+}
+hr {
+    clear: both;
+    border-bottom: 1px solid #a0a0a0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 0 11px;
+}
+h1 {
+    color: #333333;
+    padding: 0px;
+    border: 0px;
+    line-height: 25px;
+    font-size: 22px;
+    text-align: left;
+    vertical-align: middle;
+}
+h2 {
+    color: #333333;
+    padding: 0 0 0 5px;
+    margin: 24px 11px -4px 11px;    /* not as marked */
+    border-left: 5px solid #e83929;
+    line-height: 44px;
+    font-size: 18px;
+    font-weight: bold;
+}
+img {
+    display: block;
+}
+em {
+    /*font-style: normal;*/
+    color: #696969;
+}
+div.total {
+    width: 100%;
+    padding: 0;
+    color: #333333;
+    background-color: #f6f6f6;
+}
+ul {
+    line-height: 0px;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+li {
+    /*list-style: url("pre.gif") outside disc; /* dot size using pic */
+}
+p {
+    color: #333333;
+    vertical-align: middle;
+    text-align: left;
+    margin: 0px;
+}
+
+div.quotebox {
+    width: auto;
+    background: #cbe9ec;
+    position: relative;
+    padding: 22px 19px 33px 19px;
+    margin: 0 11px;
+}
+i.box-top {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: -4px;
+    right: -7px;
+    background: url(/cms/diaodiao/assets/box-top.png) center center;
+    background-size: 44px 44px;
+}
+i.box-bottom {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    bottom: -4px;
+    left: -7px;
+    background: url(/cms/diaodiao/assets/box-bottom.png) center center;
+    background-size: 44px 44px;
+}
+div.box-inner {
+    position: relative;
+}
+div.box-inner * {
+    margin: 0;
+    line-height: 28px;
+    font-size: 14px;
+    text-align: left;
+}
+div.box-inner strong {
+    font-size: 17px;
+}
+div.box-inner li:before {
+    content: "•";
+    font-size: 70%;
+    margin: -10px 0 0 0;
+    padding: 0 10px;
+}
+img.lazy {
+    border: 0px;
+    width: 100%;
+    height: auto;
+}
+div.heading {
+    width: 100%;
+    height: auto;
+    padding: 20px 11px 4px 11px;   /*top=14,but h1 has 6 in line-height*/
+}
+span.headtime {
+    color: #a0a0a0;
+    line-height: 13px;
+    font-size: 11px;
+    margin: 15px 0 0 0;
+    float: left;
+}
+span.headauthor {
+    color: #a0a0a0;
+    line-height: 13px;
+    font-size: 11px;
+    margin: 15px 0 0 0;
+    float: right;
+    width: 150px;
+    overflow: hidden; /*text-overflow:ellipsis; white-space: normal;*/
+    text-align: right;
+}
+div.content {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0px;
+    padding: 0 0 28px 0;
+    /*border-bottom: 1px solid #a0a0a0;*/
+}
+div.content > ul {
+    margin: 14px 11px;
+}
+div.content_header {
+    height: 11px;
+}
+div.content > p {
+    margin-top: 14px; margin-bottom: 14px;
+    margin-left: 11px; margin-right: 11px;
+    line-height: 28px;
+    font-size: 17px;
+    text-align: left;
+    word-wrap: break-word;
+}
+/*
+div.content > p:has(> em) {
+    margin: 7px 11px;
+}*/
+div.content > p em {
+    font-size: 15px;
+    line-height: 24px;
+}
+div.content > p > a {
+    color: #e83929;
+}
+div.content > p > a:visited {
+    color: #a0a0a0;
+}
+div.content > ul {
+    line-height: 28px;
+    font-size: 17px;
+}
+div.content > ul > li:before {
+    content: "•";
+    font-size: 100%;
+    margin: 0 0 0 0;
+    padding: 0 10px ;
+}
+div.content > ul > li {
+}
+div.content > ol {
+    list-style: decimal;
+    list-style-position: inside;
+    margin: 28px 22px;
+}
+div.content > ol > li {
+}
+div.footer {
+    display: block;
+    color: #535353;
+    padding: 9px 11px 0 11px;    /*14px = p./2=5px + self.pad.9px*/
+}
+div.footer > p {
+    color: #535353;
+    line-height: 24px;
+    font-size: 14px;
+}
+div.footer a:link {
+    color: #535353;
+}
+div.footer a:visited {
+    color: #535353;
+}
+div.footer a:active {
+    color: #535353;
+}
+div.footer_level1 {
+    height: 66px;
+    margin-top: 5px; /* 10 = self.5 margin + footer > p .(24-14)/ 2 = 5 px white space */
+    margin-bottom: 11px;
+}
+img.roundportrait {
+    float: left; display: block;
+    border-radius: 50%;
+    border: 0px;
+    width: 66px;
+    height: 66px;
+}
+div.footer_right {
+    margin-left: 79px; /*13 margin + 66 pic float*/
+    padding: 5px 0 0 0;
+    height: 61px;
+    vertical-align: middle;
+}
+div.footer_right > ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    vertical-align: middle;
+}
+div.footer_right > ul > li:before {
+    content: "";  margin: 0; padding: 0; font-size: 100%; display: none;
+}
+div.footer_right > ul > li.line1 {
+    line-height: 27px;    /*keep ink looks like 9px distance, 5*/
+    font-size: 17px;
+    color: #535353;
+    width: auto;
+}
+div.footer_right > ul > li.line2 {
+    line-height: 22px;   /*keep ink looks like 9px distance, 4*/
+    font-size: 14px;
+    width: auto;
+    overflow: hidden;
+}
+div.footer_right span {
+    margin: 0px;
+    color: #c7c7c7;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+div.footer_right span.footer_wechat {
+    display: inline-block;
+}
+div.footer_right span.footer_desc {
+    /*width: px; restrict character count TODO: adapt*/
+    max-width: auto;
+    display: inline-block;
+}
+div.footer_right span.footer_author {
+    max-width: auto;
+    display: inline-block;
+}
+div.footer_right span.footer_link {
+    width: auto;
+    display: inline-block;
+}
+div.footer_right span.footer_link > a {
+    color: #c7c7c7;
+    text-decoration: none;
+}
+div.footer_level2 {
+    border: 1px solid #d3d3d3;
+    background: #ffffff;
+    padding: 7px 11px;  /*left-right:11, top-bottom: 11 = self.7 + p.4*/
+    margin-bottom: 10px;
+}
+div.footer_level2 > p {
+    color: #535353;
+    line-height: 22px;
+    font-size: 14px;
+    overflow: hidden; /*text-overflow:ellipsis; white-space: normal;*/
+    /*control max height?*/
+}
+div.footer_level2 > p a {
+    color: #e83929;
+    text-decoration: underline;
+}
+div.footer_level2 > p a:visited {
+    color: #e83929;
+    text-decoration: underline;
+}
+div.ending {
+    margin: 0px;
+    color: #898989;
+    padding: 10px 11px 15px 11px;
+    line-height: 22px;
+    font-size: 16px;
+}
+div.ending > a {
+    color: #e83929;
+    text-decoration: underline;
+}
+div.clearfix {
+    position: static;
+    clear: both;
+    /*display: none;*/
+    visibility: hidden;
+    height: 0px;
+}
+div.like {
+    box-sizing: content-box;
+    position: fixed; margin: 0px; padding: 7.5px 0 7.5px 15px;
+    bottom: 52px; right: 0px;
+    z-index: 999; border: 0px;
+    background-color: transparent;
+    background-image: url(/cms/diaodiao/assets/likes.png);
+    background-size: cover;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: 0% 0%;
+    width: 36px; height: 34px;
+    /*border-top-left-radius: 36px;
+    border-bottom-left-radius: 36px;*/
+    /*opacity: 0.8;*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+.like.nofav {
+    background-position: 0% 0%;
+    background-size: cover;
+}
+.like.fav {
+    background-position: 0% 100%;
+    background-size: cover;
+}
+img.banner {
+    width: 100%; height: auto;
+}
+/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+.cycle-slideshow, .cycle-slideshow * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.cycle-slideshow { 
+    width: 100%; min-width: 280px; max-width: 440px; position: relative;
+    margin: 5.5px 0 0 0; padding: 0; /* full page  */ height: auto;
+ }
+.cycle-slideshow img { 
+    /* 
+    some of these styles will be set by the plugin (by default) but setting them here
+    helps avoid flash-of-unstyled-content
+    */
+    position: absolute; top: 0; left: 0;
+    width: 100%; padding: 0; display: block; height: auto;
+}
+/* in case script does not load */
+.cycle-slideshow img:first-child {
+    position: static; z-index: 100;
+}
+/* pager */
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; bottom: 0px;
+    overflow: hidden; height: 36px;
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 200%; line-height: 36px; color: #ffffff; 
+    width: 24px; height: 36px; display: inline-block; cursor: pointer;
+}
+.cycle-pager span.cycle-pager-active { color: #e83929;}
+.cycle-pager > * { cursor: pointer;}
+/* 
+    media queries 
+    some style overrides to make things more pleasant on mobile devices
+*/
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    .cycle-slideshow { width: 100%;}
+    .cycle-overlay { padding: 4px }
+    .cycle-caption { bottom: 4px; right: 4px }
+}
+
+div.swipefooter {
+    /*
+    background: -moz-linear-gradient(top, #5a4f4f, #302833);
+    background: -webkit-gradient(linear,top, from(#5a4f4f), to(#302833));
+    background: -webkit-linear-gradient(top, #5a4f4f, #302833);
+    background: -o-linear-gradient(top, #5a4f4f, #302833);
+    background: linear-gradient(0deg, #302833 5%, #5a4f4f 100%);
+    */
+    background-image: url(price_bar.png);
+    width: 100%;
+    height: 55px;
+    position: relative; /*for the buylink within*/
+}
+/*iphone6 autoheight bug*/
+@media only screen and (min-width: 414px) {
+    div.swipefooter {
+        margin-top: -1px !important;
+    }
+}
+div.swipefooter > p {
+    position: absolute;
+    bottom: 13px;
+    left: 11px;
+    color: #ffffff;
+    font-family: 'Montserrat', 'Microsoft YaHei', heiti, Arial, sans-serif;
+    /*font-family: "Hiragino Sans GB";*/
+}
+div.swipefooter > p > span {
+    font-weight: bold;
+    line-height: 12px;
+    font-size: 12px;
+    margin: 0;
+}
+div.swipefooter > p > span.symbol {
+}
+div.swipefooter > p > span.text {
+}
+div.swipefooter > p > span.digit {
+    /*font-weight: normal;*/
+    line-height: 24px;
+    font-size: 24px;
+}
+div.swipefooter > a {
+    position: absolute;
+    text-decoration: none;
+    right: 11px;
+    bottom: 11px; /* img = 190*64 -> 95*32 , height 55 px*/
+}
+div.swipefooter > a > img {
+    width: 95px;
+    height: 32px;
+}
+
+
