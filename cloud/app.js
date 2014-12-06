@@ -29,18 +29,14 @@ function querytest(res,seriesID){
     query.get( seriesID, {
               success: function(result) {
                    tids = result.get("things").split(",");
-    		   for(var i=0; i < tids.length; ++i){
-                       console.log(tids[i]);
-                       query_thing.get( tids[i], {
-                           success: function(result) {
-			      things.push(result);
-			      if(i == tids.length -1 ){
-   			      	res.render('hello', { message: things.length});
-			      }
-		           },
+
+                   query_thing.containedIn(objectId, tids);
+		   query_thing.find({
+                        success: function(result) {
+	                   things.push(result);
+		        },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
-                    }
               },
               
               error: function(error) {
