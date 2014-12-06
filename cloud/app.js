@@ -24,7 +24,6 @@ function querytest(res,seriesID){
     var query = new AV.Query("series");
     var query_thing = new AV.Query("Things");
     tids = null;
-    things.length = 0;
 
     query.get( seriesID, {
               success: function(result) {
@@ -32,9 +31,8 @@ function querytest(res,seriesID){
 
                    query_thing.containedIn("objectId", tids);
 		   query_thing.find({
-                        success: function(result) {
-	                   things.push(result);
-			   res.render('hello', {message:things.length});
+                        success: function(result_things) {
+			   res.render('series', {series:result, things:result_things});
 		        },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
