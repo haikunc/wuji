@@ -30,7 +30,7 @@ function querytest(res,seriesID){
               success: function(result) {
                    tids = result.get("things").split(",");
 
-                   query_thing.containedIn(objectId, tids);
+                   query_thing.containedIn("objectId", tids);
 		   query_thing.find({
                         success: function(result) {
 	                   things.push(result);
