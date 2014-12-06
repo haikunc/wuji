@@ -18,11 +18,13 @@ app.get('/hello', function(req, res) {
 
 
 
+var tids = null;
+var things = null;
 function querytest(res,seriesID){
     var query = new AV.Query("series");
     var query_thing = new AV.Query("Things");
-    var tids = null;
-    var things = new Array();
+    tids = null;
+    things = null;
 
     query.get( seriesID, {
               success: function(result) {
