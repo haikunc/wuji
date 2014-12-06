@@ -34,7 +34,9 @@ function querytest(res,seriesID){
                        query_thing.get( tids[i], {
                            success: function(result) {
 			      things.push(result);
-   			      res.render('hello', { message: things.length});
+			      if(i == tids.length -1 ){
+   			      	res.render('hello', { message: things.length});
+			      }
 		           },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
