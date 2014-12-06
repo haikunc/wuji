@@ -34,7 +34,7 @@ function querytest(res,seriesID){
               }
         });
     res.render('hello', { message: tids.length});
-    console.log("adfasdfasdf");
+    console.log(tids[0]);
 	
 /*
   for(var i=0; i < tt; ++i){
