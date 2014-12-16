@@ -2,7 +2,7 @@
 
 var express = require('express');
 var app = express();
-var avosExpressHttpsRedirect = require('avos-express-https-redirect');
+//var avosExpressHttpsRedirect = require('avos-express-https-redirect');
 
 // App 全局配置
 app.set('views','cloud/views');   // 设置模板目录
