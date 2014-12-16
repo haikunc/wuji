@@ -2,12 +2,13 @@
 
 var express = require('express');
 var app = express();
+
 //var avosExpressHttpsRedirect = require('avos-express-https-redirect');
+//app.use(avosExpressHttpsRedirect());
 
 // App 全局配置
 app.set('views','cloud/views');   // 设置模板目录
 app.set('view engine', 'ejs');    // 设置 template 引擎
-//app.use(avosExpressHttpsRedirect());
 app.use(express.bodyParser());    // 读取请求 body 的中间件
 
 // 使用 Express 路由 API 服务 /hello 的 HTTP GET 请求
