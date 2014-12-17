@@ -137,27 +137,6 @@ function envCallback(env_data, context_data) {
     if(flag) {
         g_dx2 = true;
         $.cookie('DDinenv', escape('1'), {path: '/' , domain: 'diaox2.com'});
-        /* add favor div */
-        $('<div class="like nofav"></div>').insertAfter("div.clearfix.last");
-        /* init it's status */
-        var articleid = context_data;
-        var result = ddGetFavoStatus(articleid, getfavCallback, "");
-        if (result == true) {
-            console.log("GetFavoStatus invoke succeed, waiting callback, status set.");
-        } else {
-            console.log("GetFavoStatus invoke failed, status remains.");
-            g_fav = false;
-        }
-        /* add click function */
-        jQuery("div.like").click(function(e) {
-            result = ddSetFavoStatus(articleid, !g_favo, setfavCallback, "");
-            if (result == true) {
-                console.log("GetFavoStatus succeed, waiting callback.")
-            } else {
-                console.log("GetFavoStatus failed!")
-            }
-            e.stopPropagation();
-        });
     } else {
         /* not in dx2 env, some app use jsBridge, should set banner */
         setBanner();
@@ -222,7 +201,7 @@ jQuery(document).ready(function() {
     var result = $.cookie("DDinenv");
     if(result == undefined) {
         if(typeof(window.DDApp) == "undefined") {
-            var has = window.location.href.indexOf("#diaodiao");
+            var has = window.location.href.indexOf("#zcyApp");
             if(-1 == has) {
                 setBanner();
             }
