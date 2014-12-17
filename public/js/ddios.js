@@ -222,7 +222,7 @@ jQuery(document).ready(function() {
         if(typeof(window.DDApp) == "undefined") {
             var has = window.location.href.indexOf("#diaodiao");
             if(-1 == has) {
-      //          setBanner();
+                setBanner();
             }
         }
     }
