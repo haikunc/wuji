@@ -110,8 +110,8 @@ function getfavCallback(articleid, isFavo, context_data) {
 };
 function setBanner() {
     //640 * 155 px 
-    $('<a href="http://www.diaox2.com/"><img class="banner" src="/imgs/banner.png" /></a>').insertBefore("div.heading");
-    $('<a href="http://www.diaox2.com/"><img class="banner" src="/imgs/banner.png" /></a>').insertBefore("div.ending");
+    $('<a href="https://wuji.avosapps.com/"><img class="banner" src="/imgs/banner.png" /></a>').insertBefore("div.heading");
+    $('<a href="https://wuji.avosapps.com/"><img class="banner" src="/imgs/banner.png" /></a>').insertBefore("div.ending");
     /*
     $('<img class="banner" src="/imgs/banner.png" usemap="#downhead" alt="banner" /><map id="downhead" name="downhead"><area shape="rect" coords="460,40,620,120" href="http://www.diaox2.com/appstore.html" alt="Download diaodiao" /></map>').insertBefore("div.heading");
     $('<img class="banner" src="/imgs/banner.png" usemap="#downfoot" alt="banner" /><map id="downfoot" name="downfoot"><area shape="rect" coords="460,40,620,120" href="http://www.diaox2.com/appstore.html" alt="Download diaodiao" /></map>').insertAfter("div.ending");*/
@@ -123,7 +123,7 @@ function envCallback(env_data, context_data) {
         flag = false;
     } else {
         try {
-            if(typeof(env_data) != "object" || env_data.app_name != "diaodiao") {
+            if(typeof(env_data) != "object" || env_data != "zxyApp") {
                 flag = false;
             } else {
                 flag = true;
@@ -222,7 +222,7 @@ jQuery(document).ready(function() {
         if(typeof(window.DDApp) == "undefined") {
             var has = window.location.href.indexOf("#diaodiao");
             if(-1 == has) {
-                setBanner();
+      //          setBanner();
             }
         }
     }
