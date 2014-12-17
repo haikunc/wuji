@@ -123,10 +123,11 @@ function envCallback(env_data, context_data) {
         flag = false;
     } else {
         try {
-            if(typeof(env_data) != "object" || env_data != "zcyApp") {
-                flag = false;
-            } else {
+//            if(typeof(env_data) != "object" || env_data != "zcyApp") {
+            if(env_data == "zcyApp") {
                 flag = true;
+            } else {
+                flag = false;
 	    	alert(env_data);
             }
         } catch(e) {
