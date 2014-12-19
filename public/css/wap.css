@@ -44,7 +44,7 @@ div.wrapperall {
 div.head {
     width: 100%; height: 330px; /* 640 x 661 */
     position: relative;
-    background-image: url(wapback.jpg);
+    background-image: url(/imgs/wapback.jpg);
     background-size: cover; 
     background-position: center center;
     background-origin: content-box;
@@ -127,7 +127,7 @@ div.insidemart {
     filter: alpha(opacity=70);
 }
 div#page2 {
-    background-image: url(firstpage_wap.jpg);
+    background-image: url(firstpage_wap.png);
 }
 div#page3 {
     background-image: url(goods_wap.jpg);
