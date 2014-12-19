@@ -60,7 +60,7 @@ div.message {
 div#logo {
     width: 135px; height: 49px; /*269*98*/
     position: absolute; bottom: 196px; left: 93px;
-    background-image: url(wap_logo.png);
+    background-image: url(/imgs/wap_logo.png);
 }
 div#apple {
     width: 191px; height: 50px; /*382*100*/
@@ -164,7 +164,7 @@ p#notice {
 div#weibo {
     /*position: absolute; top: 76px; left: 20%;*/
     position: relative; margin: 24px auto;
-    background-image: url(weibo.png);
+    background-image: url(/imgs/weibo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top left;
@@ -176,7 +176,7 @@ div#weibo {
 div#wechat {
     /*position: absolute; top: 126px; left: 20%;*/
     position: relative; margin: 20px auto;
-    background-image: url(wechat.png);
+    background-image: url(/imgs/wechat.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top left;
@@ -231,12 +231,12 @@ div.banner {
     position: relative;
 }
 div#arrow {
-    background-image: url(arrow.png);
+    background-image: url(/imgs/arrow.png);
     float: right;
     height: 40px; width: 39px;
 }
 div#safari {
-    background-image: url(safari.png);
+    background-image: url(/imgs/safari.png);
     float: left;
     height: 60px; width: 60px;
 .clearfix {
