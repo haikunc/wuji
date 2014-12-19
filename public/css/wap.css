@@ -1,0 +1,244 @@
+html { 
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    display:block; max-width: 440px; min-width: 320px;
+    margin: 0 auto; background: #696969;
+    font-family: "Hiragino Sans GB", "Helvetica Neue", Helvetica, "Microsoft Yahei", heiti, Arial, sans-serif;
+}
+body * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    margin: 0; padding: 0; border: 0; box-sizing: border-box;
+}
+div {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+h2, p {
+    transition-timing-function: ease-out;
+    /*transition-timing-function: cubic-bezier(.1,-0.5,.9,1.5);
+    transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -o-transition: all 1.5s;*/
+}
+.stripe h2 {
+    color: #000; font-weight: 300;
+    line-height: 48px;
+    font-size: 32px;
+}
+.stripe p {
+    color: #000;
+    line-height: 24px;
+    font-size: 16px;
+}
+div.wrapperall {
+    width: 100%;
+}
+div.head {
+    width: 100%; height: 330px; /* 640 x 661 */
+    position: relative;
+    background-image: url(wapback.jpg);
+    background-size: cover; 
+    background-position: center center;
+    background-origin: content-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+div.message {
+    position: absolute; bottom: 0px; left: 50%;
+    background: transparent;
+    width: 320px; height: 300px;
+    margin-left: -160px;    /*keep it center*/
+}
+div#logo {
+    width: 135px; height: 49px; /*269*98*/
+    position: absolute; bottom: 196px; left: 93px;
+    background-image: url(wap_logo.png);
+}
+div#apple {
+    width: 191px; height: 50px; /*382*100*/
+    position: absolute; bottom: 93px; left: 65px;
+}
+#apple img, #android img {
+    width: 191px; height: 50px;
+}
+div#android {
+    width: 191px; height: 50px;
+    position: absolute; bottom: 31px; left: 65px;
+}
+#apple img:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+#android img:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+div.page {
+    width: 100%; height: 600px; /* background image:  980 x 600 */
+    background-size: contain;
+    background-position: center center;
+    background-origin: content-box;
+    background-clip: border-box;
+    background-color: transparent;
+    margin-left: auto; margin-right: auto;
+}
+div.stripe {
+    position: absolute; bottom: 0px; left: 50%;
+    background: transparent;
+    margin-left: -160px;    /*keep it center*/
+    height: 300px; width: 320px;
+}
+.last {
+    height: 340px !important;
+}
+div.leftpic {
+    width: 145px; height: 231px; /* 290 * 462 */
+    position: absolute; top: 35px; left: 0;  /*left and top*/
+}
+div.rightpic {
+    width: 145px; height: 231px;
+    position: absolute; top: 35px; right: 0;  /*left and top*/
+}
+div.righttext {
+    position: absolute; top: 100px; right: 0;  /*left and top*/
+    width: 160px; height: 120px;
+}
+div.lefttext {
+    position: absolute; top: 100px; left: 10px;  /*left and top*/
+    width: 160px; height: 120px;
+}
+div.insidemart {
+    position: absolute; bottom: 14px; left: 65px; 
+    width: 191px; height: 50px;
+}
+.insidemart img {
+    width: 191px; height: 50px;
+}
+.insidemart img:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+div#page2 {
+    background-image: url(firstpage_wap.jpg);
+}
+div#page3 {
+    background-image: url(goods_wap.jpg);
+}
+div#page4 {
+    background-image: url(experience_wap.jpg);
+}
+div#page5 {
+    background-image: url(collection_wap.jpg);
+}
+.gray {
+    width: 100%; position: relative;
+    background: #fafafa; height: 300px;
+}
+.white {
+    background: #ffffff; height: 300px;
+    width: 100%; position: relative;
+}
+.footer {
+    background: #ffffff; height: 200px;
+    width: 100%; position: relative;
+}
+div.foot {
+    position: absolute; bottom: 0px; left: 50%;
+    background: transparent;
+    margin-left: -140px;    /*keep it center*/
+    height: 200px; width: 280px;
+    background: #ffffff; color: #000;
+}
+p#notice {
+    text-align: center; margin: 32px 0;
+    line-height: 24px; font-size: 16px;
+}
+div#weibo {
+    /*position: absolute; top: 76px; left: 20%;*/
+    position: relative; margin: 24px auto;
+    background-image: url(weibo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 170px; height: 30px; /*73*60 pic 80*17 text*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: center;
+}
+div#wechat {
+    /*position: absolute; top: 126px; left: 20%;*/
+    position: relative; margin: 20px auto;
+    background-image: url(wechat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 126px; height: 30px; /*73*60pic 69*17 text*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: center;
+}
+#weibo p, #wechat p {
+    position: absolute; top: 2px; left: 44px;
+}
+.textlink {
+}
+div.foot p {
+    margin: 0; line-height: 24px; font-size: 16px;
+}
+div.foot p > a {
+    text-decoration: underline; color: #000;
+}
+div.copyright {
+    width: 100%; background: #fafafa; color: #969696;
+    height: 50px; /* 980 x 70 */
+}
+span#copyright {
+    text-align: center; display: block;
+    font-size: 14px; padding: 18px 0 0 0;
+}
+span#icp {
+    -webkit-text-size-adjust: none;
+    text-align: center; display: block;
+    font-size: 8px; line-height: 10px;
+}
+#icp a {
+    text-decoration: none;
+    color: #969696;
+}
+div.banner {
+    box-sizing: content-box; display: none;
+    background-color: #333333; color: #ffffff;
+    position: fixed; top: 0; z-index: 1111;
+    opacity: 0.9; filter: alpha(opacity=90);
+    border: 0px; width: 100%; height: 100%;
+}
+.banner p {
+    font-size: 20px;
+}
+.banner span {
+    color: #36ccc0;
+}
+.banner .line {
+    display: block; font-size: 20px;
+    position: relative;
+}
+div#arrow {
+    background-image: url(arrow.png);
+    float: right;
+    height: 40px; width: 39px;
+}
+div#safari {
+    background-image: url(safari.png);
+    float: left;
+    height: 60px; width: 60px;
+.clearfix {
+    clear: both;
+}

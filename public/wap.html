@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="max-age=864" />
+    <title>最创意，全球创意生活集锦</title>
+    <link rel="stylesheet" href="/css/wap.css" type="text/css" />
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/check.min.js"></script>
+    <script src="/js/wx.js"></script>
+    <link rel="icon" href="/imgs/favicon.ico" type="image/x-icon" />
+</head>
+<body id="1413706968">
+<div class="wrapperall">
+    <div class="head">
+        <div class="message">
+            <div id="logo"></div>
+            <div id="apple"><a id="iOS_link" href="appstore.html"><img src="/imgs/appstore_wap.png" /></a></div>
+            <div id="android"><a id="android_link" href="javascript:void(0)"><img src="/imgs/android_wap.png" /></a></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="foot">
+                <p id="notice">了解更多，关注我们：</p>
+                <div id="wechat"><p><a lass="textlink" href="qr_wap.jpg">调调style</a></p></div>
+                <div id="weibo"><p><a class="textlink" href="http://weibo.com/diaox2">调调App工作室</a></p></div>
+        </div>
+    </div>
+
+    <div class="copyright">
+    <span id="copyright">Copyright&nbsp;©&nbsp;zcy.avosapps.com&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;</span>
+    </div>
+</div>
+<script>
+function tanchu() {
+    $('<div class="banner" id="killme"><div class="line"><p style="float:left; margin: 10px 0;">&nbsp;&nbsp;亲：微信环境里无法下载</p><div id="arrow"></div></div><div class="line"><br /><p style="float:left; margin: 20px 0;">&nbsp;&nbsp;1、请点击右上角的<img width=39 height=20 src="sharebutton.png" /></p></div><div class="line"><p style="float:left; margin: 20px 0;">&nbsp;&nbsp;2、选择在<span>Safari浏览器</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中打开</p><div id="safari"></div></div></div>').insertAfter("div.copyright");
+        $("#killme").fadeIn("slow", function(){
+            $(this).bind("click",function() {
+                $(this).fadeOut("normal");
+            });
+        });
+}
+jQuery(document).ready(function() {
+    //if(true) {
+    if(isWechat()) {
+        $("#iOS_link").attr("href", "javascript:tanchu()");
+    }
+});
+</script>
+</body>
+</html>
