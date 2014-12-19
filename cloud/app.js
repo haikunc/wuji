@@ -47,7 +47,7 @@ function querytest(res,seriesID){
 
 }
 
-app.get('/hello2',function(req,res){
+app.get('/series',function(req,res){
         querytest(res,req.query.sid);
         });
 

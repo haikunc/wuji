@@ -127,7 +127,7 @@ div.insidemart {
     filter: alpha(opacity=70);
 }
 div#page2 {
-    background-image: url(firstpage_wap.jpg);
+    background-image: url(/imgs/firstpage_wap.jpg);
 }
 div#page3 {
     background-image: url(goods_wap.jpg);
