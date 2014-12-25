@@ -21,7 +21,7 @@
 	<div class="total">
         <div class="heading">
             <h1><%=series.get("title")%></h1>
-            <span class="headtime"><%=var myDate=new Date(); myDate.toLocaleTimeString();%></span>
+            <span class="headtime"><%=series.createdAt()%></span>
 	    <span class="headauthor">by&nbsp;<%=series.get("author")%></span>
 	    <div class="clearfix">&nbsp;</div>
 	</div>

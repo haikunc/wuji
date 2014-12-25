@@ -49,6 +49,7 @@ function querytest(res,seriesID){
 
 app.get('/series',function(req,res){
         querytest(res,req.query.sid);
+	console.log(req.cookies.name+req.query.sid);
         });
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
