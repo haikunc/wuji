@@ -64,7 +64,7 @@ app.get('/series',function(req,res){
 		uid = randomString(64);
 		res.cookie('uid', uid, {maxAge:600000, httpOnly:true, path:'/', secure:true});
 	}
-	console.log(req.cookies.uid + req.query.sid);
+	console.log("uid="req.cookies.uid + " sid=" req.query.sid);
         });
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
