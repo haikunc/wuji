@@ -60,8 +60,8 @@ function randomString(len) {
 app.get('/series',function(req,res){
 	var uid;
         querytest(res,req.query.sid);
-	if(typeof(req.cookies.uid == "undefined")){
-		uid = randomString(64);
+	if(typeof(req.cookies.uid) == "undefined"){
+		uid = randomString(32);
 		res.cookie('uid', uid, {maxAge:600000, httpOnly:true, path:'/', secure:true});
 	}
 	console.log("uid=" + req.cookies.uid + " sid=" + req.query.sid);
