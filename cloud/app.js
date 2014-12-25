@@ -10,13 +10,12 @@ app.use(avosExpressHttpsRedirect());
 app.set('views','cloud/views');   // 设置模板目录
 app.set('view engine', 'ejs');    // 设置 template 引擎
 app.use(express.bodyParser());    // 读取请求 body 的中间件
+app.use(express.cookieParser());
 
 // 使用 Express 路由 API 服务 /hello 的 HTTP GET 请求
 app.get('/hello', function(req, res) {
         res.render('hello', { message: 'Congrats, you just set up your app!' });
         });
-
-
 
 
 var tids = null;
@@ -47,9 +46,25 @@ function querytest(res,seriesID){
 
 }
 
+function randomString(len) {
+　　len = len || 32;
+　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';    /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+　　var maxPos = $chars.length;
+　　var pwd = '';
+　　for (i = 0; i < len; i++) {
+　　　　pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
+　　}
+　　return pwd;
+}
+
 app.get('/series',function(req,res){
+	var uid;
         querytest(res,req.query.sid);
-	console.log(req.cookies.name+req.query.sid);
+	if(typeof(req.cookies.uid == "undefined")){
+		uid = randomString(64);
+		res.cookie('uid', uid, {maxAge:600000, httpOnly:true, path:'/', secure:true});
+	}
+	console.log(req.cookies.uid + req.query.sid);
         });
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
