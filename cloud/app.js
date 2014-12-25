@@ -24,15 +24,17 @@ function querytest(res,seriesID){
     var query = new AV.Query("series");
     var query_thing = new AV.Query("Things");
     tids = null;
+    var createDate;
 
     query.get( seriesID, {
               success: function(result) {
+	           createDate = result.get("createAt");
                    tids = result.get("things").split(",");
 
                    query_thing.containedIn("objectId", tids);
 		   query_thing.find({
                         success: function(result_things) {
-			   res.render('series', {series:result, things:result_things});
+			   res.render('series', {series:result, things:result_things, date:createDate});
 		        },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
@@ -63,7 +65,7 @@ app.get('/series',function(req,res){
 	if(typeof(req.cookies.uid) == "undefined"){
 		uid = randomString(32);
 		res.cookie('uid', uid, {maxAge:600000, httpOnly:true, path:'/', secure:true});
-		console.log("uid=" + req.cookies.uid + " sid=" + req.query.sid);
+		console.log("uid=" + uid + " sid=" + req.query.sid);
 	}
 	else{
 		console.log("uid=" + req.cookies.uid + " sid=" + req.query.sid);
