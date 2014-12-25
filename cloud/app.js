@@ -29,7 +29,8 @@ function querytest(res,seriesID){
     query.get( seriesID, {
               success: function(result) {
 	           createDate = result.createdAt;
-		   createDate = createDate.getFullYear()+"-"+createDate.getMonth()+"-"+createDate.getDay();
+		   var month = createDate.getMonth() + 1;
+		   createDate = createDate.getFullYear()+"-"+ month +"-"+createDate.getDate();
                    tids = result.get("things").split(",");
                    query_thing.containedIn("objectId", tids);
 		   query_thing.find({
