@@ -29,6 +29,7 @@ function querytest(res,seriesID){
     query.get( seriesID, {
               success: function(result) {
 	           createDate = result.get("createAt");
+		   console.log(createDate);
                    tids = result.get("things").split(",");
 
                    query_thing.containedIn("objectId", tids);
