@@ -28,7 +28,7 @@ function querytest(res,seriesID){
 
     query.get( seriesID, {
               success: function(result) {
-	           createDate = result.createAt.split(" ");
+	           createDate = result.createdAt.split(" ");
 		   createDate = createDate[0];
 		   console.log(createDate);
                    tids = result.get("things").split(",");
