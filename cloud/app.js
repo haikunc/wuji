@@ -63,8 +63,11 @@ app.get('/series',function(req,res){
 	if(typeof(req.cookies.uid) == "undefined"){
 		uid = randomString(32);
 		res.cookie('uid', uid, {maxAge:600000, httpOnly:true, path:'/', secure:true});
+		console.log("uid=" + req.cookies.uid + " sid=" + req.query.sid);
 	}
-	console.log("uid=" + req.cookies.uid + " sid=" + req.query.sid);
+	else{
+		console.log("uid=" + req.cookies.uid + " sid=" + req.query.sid);
+	}
         });
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
