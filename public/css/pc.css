@@ -673,4 +673,13 @@ div.nav {
     height: 60px; background-color: #eaeaea;
 }
 
-
+div.tucao {
+    margin: 22px 36px; /* up,bot = 30, but (44-28)/2 = 8*/
+    color: #a8a8a8;
+    line-height: 44px;
+    font-size: 28px;
+}
+div.tucao > a {
+    color: #e83929;
+    text-decoration: underline;
+}

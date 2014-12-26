@@ -535,4 +535,13 @@ div.swipefooter > a > img {
     height: 32px;
 }
 
-
+div.tucao {
+    margin: 11px 18px; /* up,bot = 30, but (44-28)/2 = 8*/
+    color: #a8a8a8;
+    line-height: 22px;
+    font-size: 14px;
+}
+div.tucao > a {
+    color: #e83929;
+    text-decoration: underline;
+}
