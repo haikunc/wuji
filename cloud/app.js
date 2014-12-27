@@ -26,7 +26,7 @@ function querytest(res,seriesID){
     var query = new AV.Query("series");
     var query_thing = new AV.Query("Things");
     pids = null;
-    pids_value = null;
+    pids_value = new Array();
     var createDate;
 
     query.get( seriesID, {
