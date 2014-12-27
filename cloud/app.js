@@ -41,6 +41,7 @@ function querytest(res,seriesID){
 		
 		   console.log(pids_value);
                    query_thing.containedIn("pid", pids_value);
+		   query_thing.ascending("pid");
 
 		   query_thing.find({
                         success: function(result_things) {
