@@ -31,8 +31,8 @@ function querytest(res,seriesID){
 	           createDate = result.createdAt;
 		   var month = createDate.getMonth() + 1;
 		   createDate = createDate.getFullYear()+"-"+ month +"-"+createDate.getDate();
-                   tids = result.get("things").split(",");
-                   query_thing.containedIn("objectId", tids);
+                   tids = result.get("pids").split(",");
+                   query_thing.containedIn("pid", pids);
 		   query_thing.find({
                         success: function(result_things) {
 			   res.render('series', {series:result, things:result_things, date:createDate});
