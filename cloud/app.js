@@ -32,6 +32,7 @@ function querytest(res,seriesID){
 		   var month = createDate.getMonth() + 1;
 		   createDate = createDate.getFullYear()+"-"+ month +"-"+createDate.getDate();
                    pids = result.get("pids").split(",");
+		   console.log(result.get("pids"));
                    query_thing.containedIn("pid", pids);
 		   query_thing.find({
                         success: function(result_things) {
