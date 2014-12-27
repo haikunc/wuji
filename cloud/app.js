@@ -38,8 +38,9 @@ function querytest(res,seriesID){
 		   for(var i = 0; i < pids.length; i++){
 			pids_value[i]=pids[i];
 		   }
+		
 
-                   query_thing.containedIn("pid", pids);
+                   query_thing.containedIn("pid", pids_value);
 
 		   query_thing.find({
                         success: function(result_things) {
