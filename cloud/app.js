@@ -39,7 +39,6 @@ function querytest(res,seriesID){
 			pids_value.push(Number(pids[i]));
 		   }
 		
-		   console.log(pids_value);
                    query_thing.containedIn("pid", pids_value);
 		   query_thing.ascending("pid");
 
