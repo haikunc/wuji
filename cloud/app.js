@@ -36,7 +36,7 @@ function querytest(res,seriesID){
 		   createDate = createDate.getFullYear()+"-"+ month +"-"+createDate.getDate();
                    pids = result.get("pids").split(",");
 		   for(var i = 0; i < pids.length; i++){
-			pids_value[i]=pids[i];
+			pids_value[i]=Number(pids[i]);
 		   }
 		
 		   console.log(pids_value);
