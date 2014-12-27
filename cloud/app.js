@@ -19,11 +19,14 @@ app.get('/hello', function(req, res) {
 
 
 var pids = null;
+var pids_value = null;
+
 var things = new Array();
 function querytest(res,seriesID){
     var query = new AV.Query("series");
     var query_thing = new AV.Query("Things");
     pids = null;
+    pids_value = null;
     var createDate;
 
     query.get( seriesID, {
@@ -32,7 +35,9 @@ function querytest(res,seriesID){
 		   var month = createDate.getMonth() + 1;
 		   createDate = createDate.getFullYear()+"-"+ month +"-"+createDate.getDate();
                    pids = result.get("pids").split(",");
-		   console.log(pids);
+		   for(var i = 0; i < pids.length; i++){
+			pids_value[i]=pids[i];
+		   }
 
                    query_thing.containedIn("pid", pids);
 
