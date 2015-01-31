@@ -29,6 +29,8 @@ function querytest(res,seriesID){
     pids_value = new Array();
     var createDate;
 
+    console.log("start get series data");
+
     query.get( seriesID, {
               success: function(result) {
 	           createDate = result.createdAt;
@@ -39,6 +41,7 @@ function querytest(res,seriesID){
 			pids_value.push(Number(pids[i]));
 		   }
 		   
+    		   console.log("series data Get");
 		   res.render('series', {series:result,  date:createDate});
 /*		
                    query_thing.containedIn("pid", pids_value);
