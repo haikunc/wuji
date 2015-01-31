@@ -29,7 +29,6 @@ function querytest(res,seriesID){
     pids_value = new Array();
     var createDate;
 
-    console.log("start get series data");
 
     query.get( seriesID, {
               success: function(result) {
@@ -41,9 +40,7 @@ function querytest(res,seriesID){
 			pids_value.push(Number(pids[i]));
 		   }
 		   
-    		   console.log("series data Get");
 		   res.render('series', {series:result,  date:createDate});
-/*		
                    query_thing.containedIn("pid", pids_value);
 		   query_thing.ascending("pid");
 
@@ -53,7 +50,6 @@ function querytest(res,seriesID){
 		        },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
-*/
               },
               
               error: function(error) {
@@ -77,7 +73,12 @@ function randomString(len) {
 
 app.get('/series',function(req,res){
 	var uid;
-        querytest(res,req.query.sid);
+    	console.log("start get series data");
+
+//        querytest(res,req.query.sid);
+
+    	console.log("start get series data" + req.query.sid);
+
 	if(typeof(req.cookies.uid) == "undefined"){
 		uid = randomString(32);
 		res.cookie('uid', uid, {maxAge:600000, httpOnly:true, path:'/', secure:true});
