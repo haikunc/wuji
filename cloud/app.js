@@ -29,8 +29,6 @@ function querytest(res,seriesID){
     pids_value = new Array();
     var createDate;
 
-    res.render('hello', { message: 'Congrats, you just set up your app!' });
-/*
     query.get( seriesID, {
               success: function(result) {
 	           createDate = result.createdAt;
@@ -41,6 +39,8 @@ function querytest(res,seriesID){
 			pids_value.push(Number(pids[i]));
 		   }
 		   
+              	   res.render('hello', { message: 'Error'});
+/*
 		   res.render('series', {series:result,  date:createDate});
                    query_thing.containedIn("pid", pids_value);
 		   query_thing.ascending("pid");
@@ -51,6 +51,8 @@ function querytest(res,seriesID){
 		        },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
+
+*/
               },
               
               error: function(error) {
@@ -58,7 +60,6 @@ function querytest(res,seriesID){
               	   res.render('hello', { message: 'Error'});
               }
         });
-*/
 
 }
 
