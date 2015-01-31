@@ -490,7 +490,7 @@ div.swipefooter {
     background: -o-linear-gradient(top, #5a4f4f, #302833);
     background: linear-gradient(0deg, #302833 5%, #5a4f4f 100%);
     */
-    background-image: url(price_bar.png);
+    background-image: url(/imgs/price_bar.png);
     width: 100%;
     height: 55px;
     position: relative; /*for the buylink within*/
