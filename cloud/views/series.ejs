@@ -30,12 +30,14 @@
             <%for(var i =0; i < things.length; i++){%>
             <h2><strong><%=things[i].get("name")%></strong></h2>
             <p><img class="lazy" width=298 height=251 src="/imgs/pixel.gif" data-src="<%=things[i].get("image").url()%>" /></p>
+
 	    <%if(i == 0){%>
 		<div class="swipefooter">
-			<p><span class="symbol">￥</span><span class="digit"><%=things[i].get("price")%></span><span></span></p>
-			<a class="buylink" href="<%=things[i].get("buyUrl")%>"><img src="/imgs/cart.png" /></a>
+			<p><span class="symbol">￥</span><span class="digit"><%=things[i].get("pid")%></span><span></span></p>
+			<a class="buylink" href="<%=things[i].get("pid")%>"><img src="/imgs/cart.png" /></a>
 		</div>
 	    <%}%>
+
 	    <p><%=things[i].get("description")%></p>
             <%}%>
         </div>
