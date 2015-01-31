@@ -78,6 +78,7 @@ app.get('/series',function(req,res){
 //        querytest(res,req.query.sid);
 
     	console.log("start get series data" + req.query.sid);
+        res.render('hello', { message: 'Congrats, you just set up your app!' });
 
 	if(typeof(req.cookies.uid) == "undefined"){
 		uid = randomString(32);
