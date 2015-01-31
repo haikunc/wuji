@@ -29,7 +29,8 @@ function querytest(res,seriesID){
     pids_value = new Array();
     var createDate;
 
-
+    res.render('hello', { message: 'Congrats, you just set up your app!' });
+/*
     query.get( seriesID, {
               success: function(result) {
 	           createDate = result.createdAt;
@@ -57,6 +58,7 @@ function querytest(res,seriesID){
               	   res.render('hello', { message: 'Error'});
               }
         });
+*/
 
 }
 
@@ -75,10 +77,9 @@ app.get('/series',function(req,res){
 	var uid;
     	console.log("start get series data");
 
-//        querytest(res,req.query.sid);
+        querytest(res,req.query.sid);
 
     	console.log("start get series data" + req.query.sid);
-        res.render('hello', { message: 'Congrats, you just set up your app!' });
 
 	if(typeof(req.cookies.uid) == "undefined"){
 		uid = randomString(32);
