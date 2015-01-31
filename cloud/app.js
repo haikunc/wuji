@@ -38,7 +38,9 @@ function querytest(res,seriesID){
 		   for(var i = 0; i < pids.length; i++){
 			pids_value.push(Number(pids[i]));
 		   }
-		
+		   
+		   res.render('series', {series:result,  date:createDate});
+/*		
                    query_thing.containedIn("pid", pids_value);
 		   query_thing.ascending("pid");
 
@@ -48,6 +50,7 @@ function querytest(res,seriesID){
 		        },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
+*/
               },
               
               error: function(error) {
