@@ -32,11 +32,10 @@
             <p><img class="lazy" width=298 height=251 src="/imgs/pixel.gif" data-src="<%=things[i].get("image").url()%>" /></p>
 
 	    <%if(typeof(things[i].get("price")) != "undefined"){%>
-	    <%if(typeof(things[i].get("urlBuy")) != "undefined"){%>
-
-		<p><p class="item-info"><span class="item-info-price">价格：<%=things[i].get("price")%>元</span><a class="item-info-link" href="<%=things[i].get("urlBuy")%>" target="_blank"><span>查看详情</span></a></p></p>
-
+		<p><p class="item-info"><span class="item-info-price">价格：<%=things[i].get("price")%>元</span>
 	    <%}%>
+	    <%if(typeof(things[i].get("urlBuy")) != "undefined"){%>
+		<a class="item-info-link" href="<%=things[i].get("urlBuy")%>" target="_blank"><span>查看详情</span></a></p></p>
 	    <%}%>
 
 	    <p><%=things[i].get("description")%></p>
