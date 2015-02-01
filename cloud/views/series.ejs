@@ -31,14 +31,12 @@
             <h2><strong><%=things[i].get("name")%></strong></h2>
             <p><img class="lazy" width=298 height=251 src="/imgs/pixel.gif" data-src="<%=things[i].get("image").url()%>" /></p>
 
-	    <%if(i == 0 && typeof(things[i].get("price")) != "undefined"){%>
+	    <%if(typeof(things[i].get("price")) != "undefined"){%>
+	    <%if(typeof(things[i].get("urlBuy")) != "undefined"){%>
 
-		<p><p class="item-info"><span class="item-info-price">价格：<%=things[i].get("price")%>元</span><a class="item-info-link" href="<%=things[i].get("pid")%>" target="_blank"><span>查看详情</span></a></p></p>
+		<p><p class="item-info"><span class="item-info-price">价格：<%=things[i].get("price")%>元</span><a class="item-info-link" href="<%=things[i].get("urlBuy")%>" target="_blank"><span>查看详情</span></a></p></p>
 
-		<div class="swipefooter">
-			<p><span class="symbol">￥</span><span class="digit"><%=things[i].get("pid")%></span><span></span></p>
-			<a class="buylink" href="<%=things[i].get("pid")%>"><img src="/imgs/cart.png" /></a>
-		</div>
+	    <%}%>
 	    <%}%>
 
 	    <p><%=things[i].get("description")%></p>
