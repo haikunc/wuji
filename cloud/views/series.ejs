@@ -33,9 +33,7 @@
 
 	    <%if(typeof(things[i].get("price")) != "undefined" && things[i].get("price")) != 0){%>
 		<p><p class="item-info"><span class="item-info-price">价格：<%=things[i].get("price")%>元</span>
-	    <%if(typeof(things[i].get("buyUrl")) != "undefined" && things[i].get("buyUrl")) != ""){%>
 		<a class="item-info-link" href="<%=things[i].get("buyUrl")%>" target="_blank"><span>查看详情</span></a></p></p>
-	    <%}%>
 	    <%}%>
 
 	    <p><%=things[i].get("description")%></p>
