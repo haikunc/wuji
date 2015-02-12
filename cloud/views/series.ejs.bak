@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no">
+<meta http-equiv="Cache-Control" content="max-age=86400000" /><meta http-equiv="Expires" content="Sat, Dec 31 2050 00:00:00 GMT" />
+<title><%=series.get("name")%></title>
+<link rel="icon" href="/imgs/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" media="only screen and (min-device-width: 1280px)" type="text/css" href="/css/pc.css" />
+<link rel="stylesheet" media="only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-device-width: 1280px)" type="text/css" href="/css/phone.css" />
+<script src="/js/jquery-2.1.0.min.js">
+</script><script src="/js/jquery.lazy.min.js">
+</script><script src="/js/jquery.cycle2.min.js">
+</script><script src="/js/jquery.cycle2.swipe.min.js"></script>
+</head>
+
+<body >
+	<div class="total">
+        <div class="heading">
+            <h1><%=series.get("name")%></h1>
+            <span class="headtime"><%=date%></span>
+	    <span class="headauthor">by&nbsp;<%=series.get("author")%></span>
+	    <div class="clearfix">&nbsp;</div>
+	</div>
+        <hr>
+	<div class="content">
+            <%for(var i =0; i < things.length; i++){%>
+            <h2><strong><%=things[i].get("name")%></strong></h2>
+            <p><img class="lazy" width=298 height=251 src="/imgs/pixel.gif" data-src="<%=things[i].get("image").url()%>" /></p>
+	    <p><%=things[i].get("description")%></p>
+            <%}%>
+        </div>
+        <hr>
+        <div class="ending">
+	<div class="tucao">原文来自（有改动）:<br/><%=series.get("fromUrl")%></div>
+        <div class="clearfix last"></div>
+	</div>
+	<script src="/js/ddios.js"></script>
+ 	<script src="/js/wx.js"></script>
+</body>
+</html>
+
