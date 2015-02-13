@@ -625,7 +625,7 @@ hr.sep {
 }
 .reltext .cardtitle {
     position: absolute; margin-right: 9px;
-    left: 0px; top: 8px;  /*10px heading = 8 + (20-16)/2*/
+    left: 8px; top: 8px;  /*10px heading = 8 + (20-16)/2*/
     font-size: 16px; line-height: 20px;
     word-wrap: break-word; overflow: hidden;
     text-overflow: ellipsis; white-space: normal;
@@ -633,7 +633,7 @@ hr.sep {
 }
 .reltext .cardread {
     position: absolute; margin-right: 9px;
-    left: 0px; bottom: 8px; /*10 ending - (15-11)/2*/
+    left: 8px; bottom: 40px; /*42 ending - (15-11)/2*/
     font-size: 11px; line-height: 15px;
     word-wrap: break-word; overflow: hidden;
     text-overflow: ellipsis; white-space: normal;
