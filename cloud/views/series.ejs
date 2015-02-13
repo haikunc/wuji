@@ -49,13 +49,13 @@
 
 	<div class="related" style="">
 
-            <%for(var i =0; i < result_series.length; i++){%>
-		<div class="relcard" data-href="/series?sid=<%=result_series[i].get("ObjectId")%>">
-		<a href="/series?sid=<%=result_series[i].get("ObjectId")%>">
-			<div class="relpic"><img src="<%=result_series[i].get("cover").url()%>"></div>
+            <%for(var i =0; i < relate_series.length; i++){%>
+		<div class="relcard" data-href="/series?sid=<%=relate_series[i].get("ObjectId")%>">
+		<a href="/series?sid=<%=relate_series[i].get("ObjectId")%>">
+			<div class="relpic"><img src="<%=relate_series[i].get("cover").url()%>"></div>
 			<div class="reltext">
-				<span class="cardtitle"><%=result_series[i].get("name")%></span>
-				<span class="cardread" ><%=result_series[i].get("author")%></span>
+				<span class="cardtitle"><%=relate_series[i].get("name")%></span>
+				<span class="cardread" ><%=relate_series[i].get("author")%></span>
 			</div>
 		</a>
 		</div>

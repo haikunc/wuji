@@ -29,6 +29,9 @@ function querytest(res,seriesID){
     pids_value = new Array();
     var createDate;
 
+    var query_series = new AV.Query("series");
+    relate_series = new Array();
+
     query.get( seriesID, {
               success: function(result) {
 	           createDate = result.createdAt;
@@ -38,13 +41,22 @@ function querytest(res,seriesID){
 		   for(var i = 0; i < pids.length; i++){
 			pids_value.push(Number(pids[i]));
 		   }
+		   var tag1 = result.get("tag1");
+		   query_series.equalTo("tag1", tag1);
+		   query_series.limit(5);
+		   query_series.find({
+			success:function(result_series){
+				relate_series = result_series;
+			},
+			error:function(error){}
+		   });
 		   
                    query_thing.containedIn("pid", pids_value);
 		   query_thing.ascending("pid");
 
 		   query_thing.find({
                         success: function(result_things) {
-			   res.render('series', {series:result, things:result_things, date:createDate});
+			   res.render('series', {series:result, things:result_things, date:createDate, relate:relate_series});
 		        },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
