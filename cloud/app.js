@@ -41,9 +41,12 @@ function querytest(res,seriesID){
 		   for(var i = 0; i < pids.length; i++){
 			pids_value.push(Number(pids[i]));
 		   }
+
 		   var tag1 = result.get("tag1");
 		   query_series.equalTo("tag1", tag1);
 		   query_series.limit(5);
+		   query_series.descending("createdAt");
+		   query_series.lessThan("createdAt", result.get("createdAt"));
 		   
                    query_thing.containedIn("pid", pids_value);
 		   query_thing.ascending("pid");
