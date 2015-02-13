@@ -44,22 +44,23 @@ function querytest(res,seriesID){
 		   var tag1 = result.get("tag1");
 		   query_series.equalTo("tag1", tag1);
 		   query_series.limit(5);
-		   query_series.find({
-			success:function(result_series){
-				relate_series = result_series;
-              	   		console.log("get relate series:" + result_series);
-			},
-			error:function(error){
-              	   		console.log("get relate series error:" + error);
-			}
-		   });
 		   
                    query_thing.containedIn("pid", pids_value);
 		   query_thing.ascending("pid");
 
 		   query_thing.find({
                         success: function(result_things) {
-			   res.render('series', {series:result, things:result_things, date:createDate, relate:relate_series});
+
+		   		query_series.find({
+					success:function(result_series){
+						relate_series = result_series;
+              	   				console.log("get relate series:" + result_series);
+			   			res.render('series', {series:result, things:result_things, date:createDate, relate:relate_series});
+					},
+					error:function(error){
+              	   				console.log("get relate series error:" + error);
+					}
+		   		});
 		        },
                            error: function(error) {res.render('hello', { message: 'Error'});}
                        });
