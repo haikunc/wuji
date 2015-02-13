@@ -242,3 +242,23 @@ div#safari {
 .clearfix {
     clear: both;
 }
+
+
+.relate_ti {
+    background: 0 0;
+    border: none;
+    margin: 0;
+    font-size: 15px;
+    padding-bottom: 15px
+    line-height: 22px;
+    padding-top: 13px;
+    padding-bottom: 5px
+}
+
+.relate_ti b {
+    background: #f9f9f9;
+    color: #929292;
+    padding: 0
+}
+
+
