@@ -581,20 +581,17 @@ div.tucao > a {
     color: #f84e4e !important
 }
 
-h3.relate_ti {
-    background: 0 0;
-    border: none;
-    margin: 0;
-    font-size: 15px;
-    padding-bottom: 15px;
+div.relate_ti {
+    margin: 11px 18px; /* up,bot = 30, but (44-28)/2 = 8*/
+    color: #a8a8a8;
     line-height: 22px;
-    padding-top: 13px;
-    padding-bottom: 5px
+    font-size: 14px;
 }
 
-h3.relate_ti b {
+div.relate_ti b {
     background: #f9f9f9;
     color: #929292;
+    font-family: 'Helvetica,Microsoft YaHei,Tohoma,Arial';
     padding: 0
 }
 
