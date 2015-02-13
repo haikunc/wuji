@@ -581,7 +581,7 @@ div.tucao > a {
     color: #f84e4e !important
 }
 
-.relate_ti {
+h3.relate_ti {
     background: 0 0;
     border: none;
     margin: 0;
@@ -592,7 +592,7 @@ div.tucao > a {
     padding-bottom: 5px
 }
 
-.relate_ti b {
+h3.relate_ti b {
     background: #f9f9f9;
     color: #929292;
     padding: 0
