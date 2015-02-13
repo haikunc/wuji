@@ -582,7 +582,7 @@ div.tucao > a {
 }
 
 div.relate_ti {
-    margin: 1px 18px; /* up,bot = 30, but (44-28)/2 = 8*/
+    margin: 10px 10px; /* up,bot = 30, but (44-28)/2 = 8*/
     color: #a8a8a8;
     line-height: 22px;
     font-size: 14px;

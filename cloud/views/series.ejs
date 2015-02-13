@@ -49,18 +49,19 @@
 
 	<div class="related" style="">
 
-		<div class="relcard" data-href="/series?sid=54dca58de4b02fa630e5a19d">
-		<a href="/series?sid=54dca58de4b02fa630e5a19d">
-			<div class="relpic"><img src="http://a.diaox2.com/cms/sites/default/files/20150115/firstpage/000.jpg"></div>
+            <%for(var i =0; i < result_series.length; i++){%>
+		<div class="relcard" data-href="/series?sid=<%=result_series[i].get("ObjectId")%>">
+		<a href="/series?sid=<%=result_series[i].get("ObjectId")%>">
+			<div class="relpic"><img src="<%=result_series[i].get("cover").url()%>"></div>
 			<div class="reltext">
-				<span class="cardtitle">几件小事，让你立刻成为手机摄影大师</span>
-				<span class="cardread" >阅读 42530</span>
+				<span class="cardtitle"><%=result_series[i].get("name")%></span>
+				<span class="cardread" ><%=result_series[i].get("author")%></span>
 			</div>
 		</a>
 		</div>
+	     <%}%>
 
 		<div class="clearfix"></div>
-
 		<div id="relcardlast"></div>
 	</div>
 
