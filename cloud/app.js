@@ -47,8 +47,11 @@ function querytest(res,seriesID){
 		   query_series.find({
 			success:function(result_series){
 				relate_series = result_series;
+              	   		console.log("get relate series:" + result_series);
 			},
-			error:function(error){}
+			error:function(error){
+              	   		console.log("get relate series error:" + error);
+			}
 		   });
 		   
                    query_thing.containedIn("pid", pids_value);
