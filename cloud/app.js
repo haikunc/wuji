@@ -46,7 +46,7 @@ function querytest(res,seriesID){
 		   query_series.equalTo("tag1", tag1);
 		   query_series.limit(5);
 		   query_series.descending("createdAt");
-		   query_series.lessThan("createdAt", result.get("createdAt"));
+//		   query_series.lessThan("createdAt", result.get("createdAt"));
 		   
                    query_thing.containedIn("pid", pids_value);
 		   query_thing.ascending("pid");
