@@ -55,7 +55,7 @@ function querytest(res,seriesID){
 					success:function(result_series){
 						relate_series = result_series;
               	   				console.log("get relate series:" + result_series);
-			   			res.render('series', {series:result, things:result_things, date:createDate, relate:relate_series});
+			   			res.render('series', {series:result, things:result_things, date:createDate, relate:result_series});
 					},
 					error:function(error){
               	   				console.log("get relate series error:" + error);
