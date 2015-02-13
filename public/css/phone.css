@@ -599,12 +599,12 @@ div.relate_ti b {
 
 .related {
     position: relative;
-    background-color: #eaeaea;
+   /* background-color: #eaeaea;*/
 }
 .relcard {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-    position: relative; height: 110px; width: 100%;
+   /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+   /* -webkit-tap-highlight-color: transparent; */
+    position: relative; height: 84px; width: 100%;
     /*border-bottom: 1px solid #c3c9c9;*/
 }
 hr.sep {
@@ -617,7 +617,7 @@ hr.sep {
     display: block; float: left;
 }
 .relpic > img {
-    height: 92px; width: 92px;    /*thumb*/
+    height: 63px; width: 97px;    /*thumb*/
 }
 .reltext {
     position: relative; height: 110px;
@@ -639,5 +639,4 @@ hr.sep {
     text-overflow: ellipsis; white-space: normal;
     color: #626262;
 }
-
 
