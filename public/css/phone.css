@@ -600,10 +600,12 @@ div.relate_ti b {
 .related {
     position: relative;
    /* background-color: #eaeaea;*/
+    background-color: transparent;
 }
 .relcard {
    /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
    /* -webkit-tap-highlight-color: transparent; */
+    -webkit-tap-highlight-color: transparent;
     position: relative; height: 84px; width: 100%;
     /*border-bottom: 1px solid #c3c9c9;*/
 }
