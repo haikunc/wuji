@@ -50,7 +50,7 @@
 	<div class="related" style="">
 
             <%for(var i =0; i < relate.length; i++){%>
-		<div class="relcard" data-href="/series?sid=<%=relate[i].get("ObjectId")%>">
+		<div class="relcard" data-href="/series?sid=<%=relate[i].get("objectId")%>">
 		<a href="/series?sid=<%=relate[i].get("ObjectId")%>">
 			<div class="relpic"><img src="<%=relate[i].get("cover").url()%>"></div>
 			<div class="reltext">

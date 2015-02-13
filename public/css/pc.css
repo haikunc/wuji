@@ -589,7 +589,7 @@ div.xxxx > a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
     position: relative; height: 220px; width: 100%;
-    border-bottom: 1px solid #c3c9c9;
+  /*  border-bottom: 1px solid #c3c9c9; */
 }
 .relpic {
     margin: 16px 16px 16px 18px;
