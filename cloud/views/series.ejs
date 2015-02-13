@@ -52,9 +52,9 @@
 	<div class="related" style="">
 
             <%for(var i =0; i < relate.length; i++){%>
-		<div class="relcard" data-href="/series?sid=<%=relate[i].id%>">
+		<div class="relcard" data-href="/series?sid=<%=relate[i].id%>#zcyApp">
 		<a href="/series?sid=<%=relate[i].id%>">
-			<div class="relpic"><img src="<%=relate[i].get("cover").url()%>"></div>
+			<div class="relpic"><img src="<%=relate[i].get("cover").url()%>#zcyApp"></div>
 			<div class="reltext">
 				<span class="cardtitle"><%=relate[i].get("name")%></span>
 				<span class="cardread" ><%=relate[i].get("author")%></span>
