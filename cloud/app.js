@@ -45,6 +45,7 @@ function querytest(res,seriesID){
 		   var tag1 = result.get("tag1");
 		   query_series.equalTo("tag1", tag1);
 		   query_series.limit(5);
+		   query_series.notEqualTo("objectId", seriesID);
 		   query_series.descending("createdAt");
 //		   query_series.lessThan("createdAt", result.get("createdAt"));
 		   
