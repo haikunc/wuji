@@ -39,12 +39,12 @@
 	    <%if(typeof(things[i].get("buyUrl")) != "undefined" && things[i].get("buyUrl") != 0){%>
 		<a class="item-info-link" href="<%=things[i].get("buyUrl")%>" target="_blank"><span>查看详情</span></a></p></p>
 	    <%}%>
-
+	    <%if(typeof(things[i].get("video_src")) != "undefined" ){%>
+	   	 <p><iframe class="video_frame" frameborder="0" width="100%" height="223" data-src="http://v.qq.com/iframe/player.html?vid=d0146s4z2c1&amp;auto=0" allowfullscreen="" src="http://v.qq.com/iframe/player.html?vid=d0146s4z2c1&amp;auto=0" scrolling="no" style="display:block; max-width: 100% !important; "></iframe></p>
+	  
+	    <%}%>
 	    <p><%=things[i].get("description")%></p>
             <%}%>
-	    <p>
-		<iframe class="video_frame" frameborder="0" width="100%" height="223" data-src="http://v.qq.com/iframe/player.html?vid=d0146s4z2c1&amp;auto=0" allowfullscreen="" src="http://v.qq.com/iframe/player.html?vid=d0146s4z2c1&amp;auto=0" scrolling="no" style="display:block; max-width: 100% !important; "></iframe>
-	    </p>
 
         </div>
         <hr>
